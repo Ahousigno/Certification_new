@@ -83,7 +83,21 @@
                                     <div class="col-sm-6">
                                         <div class="form-group"><label for="prenom">année d'obtention du
                                                 diplome<span style="color: red;"></span></label>
-                                            <input type="date" id="annee" name="anee" class="file form-control">
+                                            <select class="form-control" name="annee">
+                                                <option value="1960">1960</option>
+                                                <option value="1960">1960</option>
+                                                <option value="1960">1960</option>
+                                                <option value="1960">1960</option>
+                                                <option value="1960">1960</option>
+                                                <option value="1960">1960</option>
+                                                <option value="1960">1960</option>
+                                                <option value="1960">1960</option>
+                                                <option value="1960">1960</option>
+                                                <option value="1960">1960</option>
+                                                <option value="1960">1960</option>
+                                                <option value="1960">1960</option>
+                                                <option value="1960">1960</option>
+                                            </select>
                                             @if ($errors->has('annee'))
                                             <span class="text-danger fst-italic">
                                                 {{ $errors->first('annee') }}

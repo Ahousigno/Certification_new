@@ -22,7 +22,7 @@
                                 d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                         </svg>
                     </i>
-                    
+
                     </a>
                 </div>--}}
                 </div>
@@ -45,7 +45,7 @@
                                 <tr>
                                     <th scope="row">{{$loop->index + 1}}</th>
                                     <td>{{$formulaire->nom}}</td>
-                                    <td>{{$formulaire->prenom}}</td>
+                                    <td>{{$formulaire->prenom.' '.$formulaire->annee}}</td>
                                     <td>
                                         <div>
                                             <img src="{{asset('docs/lms/'.$formulaire->diplome)}}" width="100"
@@ -59,18 +59,16 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td>{{$formulaire->annee}}</td>
+                                    <td style="color: black">{{$formulaire->annee}}</td>
                                     <td>
-
-
-
-
+                                        <a class="btn btn-primary"><b>Voir plus</b></a>
+                                        <a class="btn btn-success"><b>Modifier</b></a>
+                                        <a class="btn btn-danger"><b>Supprimer</b></a>
                                     </td>
-                                    <td></td>
                                 </tr>
                                 @endforeach
                             </tbody>
-                            {{ $formulaires->links() }}
+                          {{ $formulaires->links() }}
                         </table>
                     </div>
                 </div>

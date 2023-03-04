@@ -68,7 +68,8 @@ class FormController extends Controller
 
     public function detailForm()
     {
-        $formulaires = DB::table('formulaires')->orderBy("nom", "asc")->paginate(10);
+        $formulaires = DB::table('formulaires')->select('*')->orderByDesc("id", "asc")->paginate(10);
+        //dd($formulaires);
         return view('admin.detail', compact('formulaires'));
     }
 
